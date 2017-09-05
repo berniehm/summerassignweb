@@ -1,0 +1,23 @@
+<tr>
+    <td> ${_scheduledClass.name} </td>
+    <td> ${_scheduledClass.description} </td>
+    <td> ${_scheduledClass.duration} mins </td>
+    <td> ${_scheduledClass.capacity} </td>
+    <td> ${_scheduledClass.difficulty} </td>
+    <td> ${_scheduledClass.time} </td>
+    <td> ${_scheduledClass.date} </td>
+    <td> ${_scheduledClass.trainer} </td>
+    <td> ${_scheduledClass.suite} </td>
+    <td> ${_scheduledClass.members.size()} </td>
+
+    <td>
+        <a href="/trainerdashboard/${_trainer.id}/editclass/${_scheduledClass.id} " class="ui icon button">
+            <i class="purple icon edit"></i>
+        </a>
+    </td>
+    <td>
+        <a href="/trainerdashboard/${_trainer.id}/deleteclass/${_scheduledClass.id}" class="ui icon button">
+            <i class="red icon trash"></i>
+        </a>
+    </td>
+</tr>

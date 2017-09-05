@@ -1,0 +1,10 @@
+<table class="ui inverted brown celled table">
+    <thead>
+    #{goals.goal-header /}
+    </thead>
+    <tbody>
+    #{list items:_goals, as:'goals'}
+    #{goals.goals-row-with-edit-delete goals:goals, trainer:_trainer/}
+    #{/list}
+    </tbody>
+</table>

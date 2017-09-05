@@ -1,0 +1,7 @@
+#{extends 'main.html' /}
+#{set title:'Member Dashboard' /}
+#{oftenUsed.menu id:"allclasses"/}
+
+<section class="ui inverted teal segment">
+    #{scheduledClassMember.tags.class-table scheduledClasses:scheduledClasses, member:member/}
+</section>

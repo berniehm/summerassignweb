@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'Trainer Dashboard' /}
+#{oftenUsed.trainermenu id:"#"/}
+
+<section class="ui inverted teal segment">
+<section class="ui inverted brown segment">
+    <section class="ui segment">
+#{assessments.tags.addassessment/}
+    </section>
+</section>
+
+    <section class="ui inverted brown segment">
+        <section class="ui segment">
+    <div class="column">
+    #{oftenUsed.listmembers members:members/}
+    </div>
+    </section>
+    </section>
+</section>
+</section>

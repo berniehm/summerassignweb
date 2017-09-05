@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'login' /}
+#{oftenUsed.welcomemenu id:"login"/}
+
+<section class="ui inverted teal segment">
+<section class="ui inverted brown raised segment">
+<div class="ui two column middle aligned grid basic segment">
+    <div class="column">
+        <img class="ui image" src="/public/images/trainer.gif">
+    </div>
+    <div class="column">
+        <form class="ui inverted teal raised segment form" action="/authenticate" method="POST">
+            <h2 class="ui center aligned header">Log-in</h2>
+            <div class="field">
+                <label>Email</label> <input placeholder="Email" type="email" name="email" required>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password"  name="password" required>
+            </div>
+            <button class="ui red submit button">Login</button>
+        </form>
+    </div>
+</div>
+</section>
+</section>

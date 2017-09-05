@@ -1,0 +1,67 @@
+<form class="ui inverted brown center aligned segment form" action="/trainerdashboard/addassessment" method="POST">
+    <div class="three fields">
+        <div class="field">
+            <label>Weight</label>
+            <input placeholder="00.00kg" type="number" name="weight"  step=".01" min="35" max="250" required>
+        </div>
+        <div class="field">
+            <label>Chest</label>
+            <input placeholder="00.00cm" type="number" name="chest" step=".1" min="15" required>
+        </div>
+        <div class="field">
+            <label>Thigh</label>
+            <input placeholder="00.00cm" type="number" name="thigh" step=".1" min="30" required>
+        </div>
+    </div>
+    <div class="three fields">
+        <div class="field">
+            <label>Upper Arm</label>
+            <input placeholder="00.00cm" type="number" name="upperarm" step=".1" min="30" required>
+        </div>
+        <div class="field">
+            <label>Waist</label>
+            <input placeholder="00.00cm" type="number" name="waist" step=".1" min="40" required>
+        </div>
+        <div class="field">
+            <label>Hips</label>
+            <input placeholder="00.00cm" type="number" name="hips" step=".1" min="40" required>
+        </div>
+    </div>
+    <div class="three fields">
+        <div class="field">
+            <label>Member</label>
+            <input placeholder="members email..." type="email" name="member" required>
+        </div>
+        <div class="field">
+            <label>Time</label>
+            <div class="two fields">
+                <div class="field">
+                    <input placeholder="hours" type="number" name="hours" step="1" min="00" max="23" required>
+                </div>
+                <div class="field">
+                    <input placeholder="mins" type="number" name="mins" step="1" min="00" max="59" required>
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label>Date</label>
+            <div class="three fields">
+                <div class="field">
+                    <input placeholder="dd" type="number" name="date" step="1" min="01" max="31" required>
+                </div>
+                <div class="field">
+                    <input placeholder="mm" type="number" name="month" step="1" min="01" max="12" required>
+                </div>
+                <div class="field">
+                    <input placeholder="yyyy" type="number" name="year" step="1" min="2017" max="2020" required>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui center aligned  field">
+        <div class="field">
+            <button class="ui blue submit button"> Book Assessment </button>
+        </div>
+    </div>
+</form>

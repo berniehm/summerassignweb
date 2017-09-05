@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+#{oftenUsed.mainpanel id:"dashboard"/}
+
+#{oftenUsed.analytics member:member, memberStats:memberStats/}
+<section class="ui inverted teal segment">
+
+#{assessments.dashboard assessment:assessment, member:member/}
+
+    <section class="ui inverted brown center aligned segment">
+    #{oftenUsed.assessment-table-comment assessments:assessments, member:member/}
+    </section>
+
+</section>

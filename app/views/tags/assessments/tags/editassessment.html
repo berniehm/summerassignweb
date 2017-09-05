@@ -1,0 +1,67 @@
+<form class="ui inverted brown center aligned segment form" action="/trainerdashboard/saveedit" method="POST">
+    <div class="three fields">
+        <div class="field">
+            <label>Weight</label>
+            <input placeholder="00.00kg" type="number" name="weight" value="${_assessment.weight}">
+        </div>
+        <div class="field">
+            <label>Chest</label>
+            <input placeholder="00.00cm" type="number" name="chest" value="${_assessment.chest}">
+        </div>
+        <div class="field">
+            <label>Thigh</label>
+            <input placeholder="00.00cm" type="number" name="thigh" value="${_assessment.thigh}">
+        </div>
+    </div>
+    <div class="three fields">
+        <div class="field">
+            <label>Upper Arm</label>
+            <input placeholder="00.00cm" type="number" name="upperarm" value="${_assessment.upperarm}">
+        </div>
+        <div class="field">
+            <label>Waist</label>
+            <input placeholder="00.00cm" type="number" name="waist" value="${_assessment.waist}">
+        </div>
+        <div class="field">
+            <label>Hips</label>
+            <input placeholder="00.00cm" type="number" name="hips" value="${_assessment.hips}">
+        </div>
+    </div>
+    <div class="three fields">
+        <div class="field">
+            <label>Member</label>
+            <input placeholder="Put here an email of the member" type="email" name="member" value="${_member.email}">
+        </div>
+        <div class="field">
+            <label>Time</label>
+            <div class="two fields">
+                <div class="field">
+                    <input placeholder="Hours" type="number" name="hours" value="${_assessment.date.getHours()}">
+                </div>
+                <div class="field">
+                    <input placeholder="Mins" type="number" name="mins" value="${_assessment.date.getMinutes()}">
+                </div>
+            </div>
+        </div>
+        <div class="field">
+            <label>Date</label>
+            <div class="three fields">
+                <div class="field">
+                    <input placeholder="dd" type="number" name="date" value="${_assessment.date.getDate()}">
+                </div>
+                <div class="field">
+                    <input placeholder="mm" type="number" name="month" value="${_assessment.date.getMonth()}">
+                </div>
+                <div class="field">
+                    <input placeholder="yyyy" type="number" name="year" value="${_assessment.date.getYear()}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui center aligned  field">
+        <div class="field">
+            <button class="ui blue submit button"> Save </button>
+        </div>
+    </div>
+</form>

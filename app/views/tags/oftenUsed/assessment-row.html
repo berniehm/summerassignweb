@@ -1,0 +1,28 @@
+<tr>
+    <td> ${_assessment.date.toLocaleString()} </td>
+    <td> ${_assessment.weight}   </td>
+    <td> ${_assessment.chest} </td>
+    <td> ${_assessment.thigh} </td>
+    <td> ${_assessment.upperarm} </td>
+    <td> ${_assessment.waist} </td>
+    <td> ${_assessment.hips}  </td>
+    <td>
+    #{if _assessment.trend}
+        <a class="ui teal tag label"></a>
+    #{/if}
+    #{if !_assessment.trend}
+        <a class="ui red tag label"></a>
+    #{/if}
+    </td>
+    <td> ${_assessment.comment} </td>
+    <td>
+        <a href="/trainerdashboard/showedit/${_assessment.id}/${_member.id}" class="ui icon button">
+            <i class="purple icon edit"></i>
+        </a>
+    </td>
+    <td>
+        <a href="/trainerdashboard/${_member.id}/deleteassessment/${_assessment.id}" class="ui icon button">
+            <i class="red icon trash"></i>
+        </a>
+    </td>
+</tr>

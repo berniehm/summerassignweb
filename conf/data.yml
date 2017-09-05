@@ -1,0 +1,57 @@
+Assessment(a1):
+   weight: 123.3
+   chest: 45.0
+   thigh: 12.5
+   upperarm: 23.3
+   waist: 32
+   hips: 38
+   trend: true
+   date: 2017-03-10 08:31:00
+
+Assessment(a2):
+   weight: 123.3
+   chest: 45.0
+   thigh: 12
+   upperarm: 23.3
+   waist: 31
+   hips: 36
+   trend: true
+   date: 2017-03-19 08:31:00
+
+Assessment(a3):
+   weight: 66.3
+   chest: 38.0
+   thigh: 8
+   upperarm: 13.3
+   waist: 27
+   hips: 26
+   trend: true
+   date: 2017-03-19 08:31:00
+   
+Member(m1):
+  email: homer@simpson.com
+  password: secret
+  name: Homer Simpson
+  address: Springfield, Mass
+  gender: Male
+  height: 1.7
+  startingweight: 101
+  assessments:
+  - a1
+  - a2
+
+Member(m2):
+  email: marge@simpson.com
+  password: secret
+  name: Marge Simpson
+  address: Springfield, Mass
+  gender: Female
+  height: 1.6
+  startingweight: 67
+  assessments:
+  - a3
+
+
+Trainer(t1):
+  email: ned@flanders.com
+  password: secret

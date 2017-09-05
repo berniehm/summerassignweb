@@ -1,0 +1,19 @@
+#{list items:_assessments, as:'assessment'}
+<table class="ui celled table">
+    <thead>
+        #{oftenUsed.assessment-header /}
+    </thead>
+    <tbody>
+        #{oftenUsed.assessment-row assessment:assessment, member:_member/}
+    </tbody>
+</table>
+<h3 class="ui header">
+    Comments
+</h3>
+<form class="ui form" action="/editcomment/${assessment.id}" method="POST">
+    <div class="ui field">
+        <textarea rows="2" name="comment" > ${assessment.comment} </textarea>
+    </div>
+    <button class="ui green submit button"> Update </button>
+</form>
+#{/list}

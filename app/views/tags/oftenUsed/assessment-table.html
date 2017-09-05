@@ -1,0 +1,10 @@
+<table class="ui inverted brown celled table">
+    <thead>
+    #{oftenUsed.assessment-header /}
+    </thead>
+    <tbody>
+    #{list items:_assessments, as:'assessment'}
+      #{oftenUsed.assessment-row-with-delete assessment:assessment, member:_member/}
+    #{/list}
+    </tbody>
+</table>

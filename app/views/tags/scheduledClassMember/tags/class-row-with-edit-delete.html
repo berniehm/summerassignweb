@@ -1,0 +1,26 @@
+<tr>
+    <td> ${_scheduledClass.name} </td>
+    <td> ${_scheduledClass.description} </td>
+    <td> ${_scheduledClass.duration} </td>
+    <td> ${_scheduledClass.capacity} </td>
+    <td> ${_scheduledClass.difficulty} </td>
+    <td> ${_scheduledClass.time} </td>
+    <td> ${_scheduledClass.date} </td>
+    <td> ${_scheduledClass.trainer} </td>
+    <td> ${_scheduledClass.suite} </td>
+    <td> ${_scheduledClass.members.size()} </td>
+
+    <td>
+
+        <a href="/dashboard/enrollmember/${_member.id}/intoclass/${_scheduledClass.id}" class="ui icon button">
+            <i class="green icon plus"></i>
+        </a>
+    </td>
+    <td>
+        <a href="/dashboard/unenroll/${_member.id}/fromclass/${_scheduledClass.id}" class="ui icon button">
+            <i class="red icon minus"></i>
+        </a>
+    </td>
+</tr>
+
+

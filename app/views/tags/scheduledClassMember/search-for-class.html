@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+#{oftenUsed.menu id:"search-for-class"/}
+
+<section class="ui inverted brown segment">
+    <form class="ui inverted teal raised segment form" action="/dashboard/searchresult" method="POST">
+        <div class="field">
+            <label>Enter Class Name For Searching.....</label>
+            <input placeholder="name" name="name" required>
+        </div>
+
+        <div class="ui center aligned inverted teal segment">
+            <button class="ui purple submit button"> Search </button>
+        </div>
+    </form>
+</section>

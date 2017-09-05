@@ -1,0 +1,57 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Accounts
+GET    /                                                        Accounts.index
+GET    /signup                                                  Accounts.signup
+GET    /login                                                   Accounts.login
+GET    /logout                                                  Accounts.logout
+POST   /authenticate                                            Accounts.authenticate
+POST   /register                                                Accounts.register
+GET    /settings                                                Accounts.settings
+POST   /settings                                                Accounts.updateSettings
+
+# Home page
+GET     /home                                                   Home.index
+GET     /dashboard                                              Dashboard.index
+
+POST    /dashboard/addassessment                                Dashboard.addAssessment
+GET     /dashboard/{memberid}/deleteassessment/{assessmentid}   Dashboard.deleteAssessment
+GET     /dashboard/allclasses                                   Dashboard.allClasses
+GET     /dashboard/enrollmember/{memberid}/intoclass/{classid}  Dashboard.enrollMember
+GET     /dashboard/unenroll/{memberid}/fromclass/{classid}      Dashboard.unenrollMember
+GET     /dashboard/searchforclass                               Dashboard.searchForClass
+POST    /dashboard/searchresult                                 Dashboard.searchResult
+POST    /dashboard/savesuite/{memberid}/{scheduledclassid}      Dashboard.saveSuite
+GET     /dashboard/showedit/{assessmentid}                      Dashboard.showEdit
+POST    /dashboard/saveedit                                     Dashboard.saveEdit
+
+# Trainer page
+GET     /trainerdashboard                                                                       TrainerDashboard.index
+GET     /trainerdashboard/viewclass                                                             TrainerDashboard.viewClass
+GET     /trainerdashboard/deletemember/{id}                                                     TrainerDashboard.deleteMember
+POST    /trainerdashboard/createclass                                                           TrainerDashboard.createClass
+GET     /trainerdashboard/allClasses                                                            TrainerDashboard.allClasses
+GET     /trainerassessment/{id}                                                                 TrainerDashboard.trainerAssessment
+POST    /editcomment/{id}                                                                       TrainerDashboard.editComment
+GET     /trainerdashboard/{trainerid}/deleteclass/{classid}                                     TrainerDashboard.deleteClass
+GET     /trainerdashboard/{trainerid}/editclass/{classid}                                       TrainerDashboard.viewEditClass
+POST    /trainerdashboard/editclass                                                             TrainerDashboard.editClass
+GET     /trainerdashboard/{trainerid}/scheduledClass/{scheduledclassid}/deletemember/{memberid} TrainerDashboard.deleteMember
+POST    /trainerdashboard/addassessment                                                         TrainerDashboard.addAssessment
+GET     /trainerdashboard/{memberid}/deleteassessment/{assessmentid}                            TrainerDashboard.deleteAssessment
+GET     /trainerdashboard/showedit/{assessmentid}/{memberid}                                    TrainerDashboard.showEdit
+POST    /trainerdashboard/saveedit                                                              TrainerDashboard.saveEdit
+POST    /trainerdashboard/creategoal                                                            TrainerDashboard.createGoal
+GET     /trainerdashboard/viewgoal                                                              TrainerDashboard.viewGoal
+
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

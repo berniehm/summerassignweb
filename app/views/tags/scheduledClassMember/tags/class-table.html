@@ -1,0 +1,10 @@
+<table class="ui  small inverted brown celled table">
+    <thead>
+    #{scheduledClass.tags.class-header /}
+    </thead>
+    <tbody>
+    #{list items:_scheduledClasses, as:'scheduledClass'}
+      #{scheduledClassMember.tags.class-row-with-edit-delete scheduledClass:scheduledClass, member:_member/}
+    #{/list}
+    </tbody>
+</table>

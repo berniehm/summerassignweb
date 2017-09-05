@@ -1,0 +1,38 @@
+<form class="ui inverted brown center aligned segment form" action="/trainerdashboard/editClass" method="POST">
+    <div class="three fields">
+        <div class="field">
+            <label>Class name</label>
+            <input placeholder="Class name" name="name" value="${_scheduledClass.name}">
+        </div>
+        <div class="field">
+            <label>Description</label>
+            <textarea rows="2" name="description"></textarea>
+        </div>
+        <div class="field">
+            <label>Duration of the class</label>
+            <input placeholder="Duration of the class" type="number" name="duration" value="${_scheduledClass.duration}">
+        </div>
+    </div>
+    <div class="four fields">
+        <div class="field">
+            <label>Capacity of the class</label>
+            <input placeholder="Capacity of the class" type="number" name="capacity" value="${_scheduledClass.capacity}">
+        </div>
+        <div class="field">
+            <label>Difficulty level</label>
+            <input placeholder="Difficulty level" name="difficulty" value="${_scheduledClass.difficulty}">
+        </div>
+        <div class="field">
+            <label>Time</label>
+            <input placeholder="Time" name="time" value="${_scheduledClass.time}">
+        </div>
+        <div class="field">
+            <label>Date</label>
+            <input placeholder="Date" name="date" value="${_scheduledClass.date}">
+        </div>
+    </div>
+
+    #{scheduledClass.tags.show-members members:_scheduledClass.members, scheduledClass:_scheduledClass, trainer:_trainer /}
+
+    <button class="ui blue submit button"> Save Edit </button>
+</form>

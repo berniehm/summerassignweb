@@ -1,0 +1,55 @@
+#{extends 'main.html' /}
+#{set title:'Settings' /}
+#{oftenUsed.menu id:"settings"/}
+
+<section class="ui inverted teal segment">
+    <section class="ui inverted brown segment">
+<div class="ui two column grid basic middle aligned segment">
+    <div class="column">
+        <img class="ui large image" src="/public/images/settings.png">
+    </div>
+    <div class="column">
+        <form class="ui inverted grey raised segment form" action="/settings" method="POST">
+            <h2 class="ui center aligned header">Update Profile</h2>
+            <div class="two fields">
+                <div class="field">
+                    <label>Name</label>
+                    <input name="member.name" value="${member.name}" required>
+                </div>
+                <div class="field">
+                    <label> Gender </label>
+                    <select class="ui dropdown" name="member.gender" required>
+                        <option value=""> Select </option>
+                        <option value="male"> Male</option>
+                        <option value="female"> Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input type="email" name="member.email" value="${member.email}" required>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="member.password" required>
+            </div>
+            <div class="field">
+                <label>Address</label>
+                <input name="member.address" value="${member.address}" required>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Height</label>
+                    <input type="number" name="member.height" step=".01" min="1" max="3" value="${member.height}" required>
+                </div>
+                <div class="field">
+                    <label>Starting Weight</label>
+                    <input type="number" name="member.startingweight" step=".01" min="35" max="250" value="${member.startingweight}" required>
+                </div>
+            </div>
+            <button class="ui red submit button">Submit</button>
+        </form>
+    </div>
+</div>
+</section>
+</section>

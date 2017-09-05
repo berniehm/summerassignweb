@@ -1,0 +1,10 @@
+<table class="ui inverted brown celled table">
+    <thead>
+    #{scheduledClass.tags.members-of-class-header /}
+    </thead>
+    <tbody>
+        #{list items:_members, as:'member'}
+          #{scheduledClass.tags.members-row-with-delete member:member, scheduledClass:_scheduledClass, trainer:_trainer/}
+        #{/list}
+    </tbody>
+</table>

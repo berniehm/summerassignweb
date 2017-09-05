@@ -1,0 +1,55 @@
+#{extends 'main.html' /}
+#{set title:'Signup' /}
+#{oftenUsed.welcomemenu id:"signup"/}
+
+<section class="ui inverted teal segment">
+<section class="ui inverted brown raised segment">
+<div class="ui two column grid basic middle aligned segment">
+    <div class="column">
+        <img class="ui big image" src="/public/images/signup.gif">
+    </div>
+    <div class="column">
+        <form class="ui inverted teal raised segment form" action="/register" method="POST">
+            <h2 class="ui aligned raised center header">Register</h2>
+            <div class="two fields">
+                <div class="field">
+                    <label>Name</label>
+                    <input placeholder="Name" type="text" name="name" required>
+                </div>
+                <div class="field">
+                    <label> Gender </label>
+                    <select class="ui dropdown" name="gender">
+                        <option value=""> Unspecified </option>
+                        <option value="male"> Male</option>
+                        <option value="female"> Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <label>Email</label>
+                <input placeholder="Email" type="email" name="email" required>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+            <div class="field">
+                <label>Address</label>
+                <input placeholder="Address" name="address" required>
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>Height</label>
+                    <input placeholder="Height" type="number" name="height" step=".01" min="1" max="3" required>
+                </div>
+                <div class="field">
+                    <label>Starting Weight</label>
+                    <input placeholder="Starting Weight" type="number" step=".01" min="35" max="250" name="startingweight" required>
+                </div>
+            </div>
+            <button class="ui red submit button">Submit</button>
+        </form>
+    </div>
+</div>
+</section>
+</section>
