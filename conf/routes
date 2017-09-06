@@ -47,6 +47,7 @@ POST    /trainerdashboard/creategoal                                            
 GET     /trainerdashboard/viewgoal                                                              TrainerDashboard.viewGoal
 
 
+
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

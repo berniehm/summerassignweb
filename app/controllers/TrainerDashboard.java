@@ -59,11 +59,11 @@ public class TrainerDashboard extends Controller
         Logger.info("Rendering Show Create A Class");
         render("../views/tags/scheduledClass/show-class.html");
     }
-     public static void viewGoal()
-     {
-         Logger.info("Rendering Show Create A Goal");
-         render("../views/tags/goals/show-goal.html");
-     }
+    public static void viewGoal()
+    {
+        Logger.info("Rendering Show Create A Goal");
+        render("../views/tags/goals/show-goal.html");
+    }
     public static void allClasses()
     {
         Logger.info("Rendering All Classes");
