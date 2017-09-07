@@ -1,3 +1,14 @@
+/**
+ * This  class will store assessments that have values such as
+ * weight
+ * chest
+ * thigh
+ * upperarm
+ * waist
+ * hips
+ * trend
+ * comment
+ */
 package models;
 
 import play.db.jpa.Model;

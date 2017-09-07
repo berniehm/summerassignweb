@@ -1,3 +1,8 @@
+/**
+ * This class will enable a member or a trainer to book an assessment
+ * created by Bernadette Murphy
+ * @ 05/09/17
+ */
 package models;
 
 import play.db.jpa.Model;

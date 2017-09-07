@@ -1,3 +1,12 @@
+/**This class will have specific methods that:
+ *
+ *       - List all the members that have an ideal starting weight.
+ *       - List all the members of a specific BMI category.
+ *       - List all the members' weight and height both imperically and metrically.
+ * @ Created by Bernadette Murphy
+ *
+ */
+
 package utils;
 
 import models.Assessment;

@@ -1,3 +1,20 @@
+/**
+ * Constructor for objects of class Member
+ *
+ *
+ * @param name The Members name
+ *
+ * @param email The Person's e-mail
+ *
+ ** @param address There is no validation on the member's address.
+ *
+ * @param gender The member's gender can be either "M" or "F". lower case entries
+ *               will be changed to upper case. ".
+ * @param height the members height as specified in assesment
+ *               @param startingweight the weight the meber starts outh with all this is entered when the member sign
+ *  created by Bernadette Murphy
+ * @07/09/17
+ */
 package models;
 
 import play.db.jpa.Model;
@@ -21,6 +38,9 @@ public class Member extends Model
 
     @OneToMany(cascade = CascadeType.ALL)
     public List<Assessment> assessments = new ArrayList<>();
+
+    @OneToMany(cascade = CascadeType.ALL)
+    public List<Goal> goals = new ArrayList<>();
 
     public Member(String email, String name, String password, String address, String gender, double height, double startingweight)
     {

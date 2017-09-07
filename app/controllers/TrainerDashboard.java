@@ -1,3 +1,9 @@
+/**
+ * This class renders the trainers dashboard.html file when they login
+ * the trainer will be able to create goals and book assessments for a member
+ * created by Bernadette Murphy
+ * @07/09/17
+ */
 package controllers;
 
 import models.*;
@@ -56,10 +62,11 @@ public class TrainerDashboard extends Controller
     }
 
     public static void viewClass()
-    {
-        Logger.info("Rendering Show Create A Class");
-        render("../views/tags/scheduledClass/show-class.html");
-    }
+{
+    Logger.info("Rendering Show Create A Class");
+    render("../views/tags/scheduledClass/show-class.html");
+}
+
 
     public static void allClasses()
     {
@@ -71,16 +78,33 @@ public class TrainerDashboard extends Controller
     public static void viewGoal()
     {
         Logger.info("Rendering Show Create A Goal");
-        render("../views/tags/goalsTrainer/create-a-goal.html");
+        render("../views/tags/goalsTrainer/create-goal.html");
     }
-public static void allGoals()
 
-{
-    Logger.info("Rendering All Goals");
-    Trainer trainer = Accounts.getLoggedInTrainer();
-    List<Goal> goals = trainer.goals;
-    render("../views/tags/goalsTrainer/allGoals.html", trainer,goals);
-}
+
+    public static void deleteGoal(Long memberId, Long goalId)
+    {
+        Goal goal = Goal.findById(goalId);
+        Member member = Member.findById(memberId);
+        Logger.info("Removing " + member.name  + "'s goal " + goal.name);
+        member.goals.remove(goal);
+        member.save();
+
+        goal.delete();
+        redirect("/trainerassessment/" + memberId);
+    }
+
+    //public static void createGoal(Long id, String name, String description, String date, String target, int targetInt) throws ParseException {
+       // Logger.info("Creating Goal");
+      //  Member member = Member.findById(id);
+        //Goal goal = new Goal(name, description, target, targetInt, date);
+
+      //  member.goals.add(goal);
+       // member.save();
+      //  redirect("/trainerassessment/" + id);
+
+    //}
+
     public static void deleteClass(Long trainerid, Long classid)
     {
         Trainer trainer = Trainer.findById(trainerid);

@@ -1,3 +1,7 @@
+/**
+ * This class converts kg to pounds
+ * and Metres in to inches
+ */
 package utils;
 
 public class Conversion

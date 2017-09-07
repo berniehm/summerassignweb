@@ -1,7 +1,11 @@
 #{extends 'main.html' /}
 #{set title:'Dashboard' /}
 #{oftenUsed.menu id:"dashboard"/}
-
+#{if member.goals.size() == 0}
+<p>  <a href="/dashboard/addgoal" >
+  <button class="ui green submit button"> No Goals set. Why not challenge yourself!! </button>
+</a></p>
+#{/if}
 <section class="ui inverted teal segment">
 #{oftenUsed.analytics member:member, memberStats:memberStats/}
   #{oftenUsed.addassessment/}

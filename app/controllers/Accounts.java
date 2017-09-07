@@ -1,10 +1,15 @@
-
+/**This class will enable a member to have an account after they signup and a trainer to be able to login
+ * This class has method such as getloggedinMember and getloggedinTrainer which allow an indvidual to login
+ * Created by Berndette Murphy
+ * @07/08/17
+ */
 package controllers;
 
 import models.Member;
 import models.Trainer;
 import play.Logger;
 import play.mvc.Controller;
+
 
 public class Accounts extends Controller
 {

@@ -1,3 +1,8 @@
+/**
+ * This Class is to define what appears on the dashboard when a member logins
+ * Created by Berndette Murphy
+ * @07/08/17
+ */
 package controllers;
 
 import models.Assessment;
@@ -8,6 +13,7 @@ import play.Logger;
 import play.mvc.Controller;
 import utils.Analytics;
 import utils.MemberStats;
+//import java.text.ParseException;
 
 import java.util.*;
 
@@ -46,6 +52,19 @@ public class Dashboard extends Controller
         String what = "Trainer";
         render("../views/tags/scheduledClassMember/class-not-found.html", what);
     }
+
+       public static void addGoal() {
+
+      render("addgoal.html");
+
+    }
+    public static void bookAssessment()
+       {
+
+           List<Trainer> trainers = Trainer.findAll();
+  }
+
+
 
     public static void saveEdit(double weight, double chest, double thigh, double upperarm, double waist, double hips, String trainer, double date, double month, double year, double hours, double mins)
     {
