@@ -1,3 +1,8 @@
+/**
+ * This class
+ *
+ *
+ */
 package models;
 
 import play.db.jpa.Model;
@@ -16,7 +21,7 @@ public class Trainer extends Model
 
     @OneToMany(cascade = CascadeType.ALL)
     public List<ScheduledClass> classes = new ArrayList<>();
-
+   public List <Goal>  goals=new ArrayList<>();
 
     public Trainer(String email, String password)
     {

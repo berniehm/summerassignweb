@@ -27,6 +27,7 @@ public class TrainerDashboard extends Controller
         render("trainerassessment.html", member, assessments, memberStats);
     }
 
+
     public static void deleteMember(Long id)
     {
         Member member = Member.findById(id);
@@ -59,11 +60,7 @@ public class TrainerDashboard extends Controller
         Logger.info("Rendering Show Create A Class");
         render("../views/tags/scheduledClass/show-class.html");
     }
-    public static void viewGoal()
-    {
-        Logger.info("Rendering Show Create A Goal");
-        render("../views/tags/goals/show-goal.html");
-    }
+
     public static void allClasses()
     {
         Logger.info("Rendering All Classes");
@@ -71,8 +68,19 @@ public class TrainerDashboard extends Controller
         List<ScheduledClass> scheduledClasses = trainer.classes;
         render("../views/tags/scheduledClass/allclasses.html", trainer, scheduledClasses);
     }
+    public static void viewGoal()
+    {
+        Logger.info("Rendering Show Create A Goal");
+        render("../views/tags/goalsTrainer/create-a-goal.html");
+    }
+public static void allGoals()
 
-
+{
+    Logger.info("Rendering All Goals");
+    Trainer trainer = Accounts.getLoggedInTrainer();
+    List<Goal> goals = trainer.goals;
+    render("../views/tags/goalsTrainer/allGoals.html", trainer,goals);
+}
     public static void deleteClass(Long trainerid, Long classid)
     {
         Trainer trainer = Trainer.findById(trainerid);

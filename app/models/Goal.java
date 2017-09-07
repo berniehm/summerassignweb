@@ -1,9 +1,7 @@
 
 
 
-/**
- * Created by Bernadette on 04/09/2017.
- */
+
 package models;
 
 import play.db.jpa.Model;
