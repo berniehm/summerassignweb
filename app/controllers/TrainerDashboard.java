@@ -138,27 +138,17 @@ public class TrainerDashboard extends Controller
         c.save();
         redirect("/trainerdashboard/allclasses");
     }
-
-    public static void addAssessment(double weight, double chest, double thigh, double upperarm, double waist, double hips, String member, double date, double month, double year, double hours, double mins)
-    {
-        List<Member> members = Member.findAll();
-        Trainer currentTrainer = Accounts.getLoggedInTrainer();
-
-        for(Member m : members)
-        {
-            if(member.equals(m.email))
-            {
-                Logger.info("Creating Assessment");
-                Assessment assessment = new Assessment(weight, chest, thigh, upperarm, waist, hips, currentTrainer.email, date, month, year, hours, mins);
-                m.assessments.add(assessment);
-                m.save();
-                render("trainerdashboard.html", members);
-            }
-        }
-        String what = "Member";
-        render("../views/tags/scheduledClassMember/class-not-found.html", what);
-    }
-
+//public static void bookAssesmet(String date, String time, String trainer, String member, String status, String trainerEmail)
+     //   List<Member> members = Member.findAll();
+     //   Trainer currentTrainer = Accounts.getLoggedInTrainer();
+            //    Logger.info("Creating Assessment");
+             //   BookAssessment BookAssessment = new BookAssessment()
+            //    m.assessments.add(BookAssessment);
+            //    m.save();
+             //   render("trainerdashboard.html", trainers);
+      //  String what = "trainer;
+     //   render("../views/tags/assessments/tags/bookassessment.html");
+//
     public static void deleteAssessment(Long memberid, Long assessmentid)
     {
         Member member = Member.findById(memberid);
