@@ -1,7 +1,7 @@
 /**
  * This class renders the trainers dashboard.html file when they login
  * the trainer will be able to create goals and book assessments for a member
- * created by Bernadette Murphy
+ * created by Bernadette Murphy >>
  * @07/09/17
  */
 package controllers;
@@ -12,6 +12,7 @@ import play.mvc.Controller;
 import utils.Analytics;
 import utils.MemberStats;
 
+import java.text.ParseException;
 import java.util.Collections;
 import java.util.List;
 
@@ -94,16 +95,15 @@ public class TrainerDashboard extends Controller
         redirect("/trainerassessment/" + memberId);
     }
 
-    //public static void createGoal(Long id, String name, String description, String date, String target, int targetInt) throws ParseException {
-       // Logger.info("Creating Goal");
-      //  Member member = Member.findById(id);
-        //Goal goal = new Goal(name, description, target, targetInt, date);
+    public static void createGoal(Long id, String name, String description, String date, String target, int targetInt) throws ParseException {
+       Logger.info("Creating Goal");
+        Member member = Member.findById(id);
+        Goal goal = new Goal(name, description, target, targetInt, date);
 
-      //  member.goals.add(goal);
-       // member.save();
-      //  redirect("/trainerassessment/" + id);
+       member.goals.add(goal);
+       member.save();redirect("/trainerassessment/" + id);
 
-    //}
+    }
 
     public static void deleteClass(Long trainerid, Long classid)
     {
